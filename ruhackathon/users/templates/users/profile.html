@@ -1,0 +1,47 @@
+{% extends 'main/content_page.html' %}
+{% load thumbnail %}
+
+{% block content %}
+
+
+
+  <div class="container-fluid">
+    <div id="profile-ceiling"></div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12 overflow-auto profile-ivents p-2">
+        {% if user_ivents|length == 0 %}
+        <div id="profile-scroll-ceiling"></div>
+        <div class="container-fluid">
+          <p id="profile-scroll-absence" class="text-center">Нет инициированных событий</p>
+        </div>
+        {% else %}
+        {% for ivent in user_ivents %}
+
+              <div class="card mb-2 profile-card">
+                <div class="card-header">
+                  {{ ivent.title }}
+                </div>
+                <div class="card-body">
+                  <!-- <h5 class="card-title">{{ ivent.title }}</h5> -->
+                  <p class="card-text">{{ ivent.description }}</p>
+                  <a href="{{ ivent.get_absolute_url }}" class="btn btn-light btn-sm card-button-view">Посмотреть</a>
+                </div>
+              </div>
+          
+        {% endfor %}
+        {% endif %}
+      </div>
+      <div class="col-md-6 col-sm-12 pt-1 pb-1 order-md-last order-sm-first">
+          
+          {% thumbnail profile.image "100x100" crop="center" as im %}
+          <figure class="figure">
+          <img class="figure-img img-fluid rounded" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ user.get_username }}'s avatar">
+          {% endthumbnail %}
+          <figcaption class="figure-caption text-center"><a href="{{ profile.get_absolute_url }}">{{ profile.user }}</a></figcaption>
+          </figure>
+          <p class="pt-3">{{ profile.description }}</p>
+      </div>
+    </div>
+    
+  </div>
+{% endblock content %}

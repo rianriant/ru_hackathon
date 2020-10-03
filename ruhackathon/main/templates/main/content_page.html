@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block header %}
+    <nav class="navbar sticky-top justify-content-end nav-top">
+
+        <a class="navbar-brand" href="{% url 'ivent-list' %}">события</a>
+        <span class="navbar-text mr-3">|</span>
+        {% if user.is_authenticated %}
+            <a class="navbar-brand" href="{% url 'ivent-create' %}">создать событие</a>
+            <span class="navbar-text mr-3">|</span>
+            <a class="navbar-brand" href="{% url 'profile-detail' user.get_username %}">мой аккаунт</a>
+            <span class="navbar-text mr-3">|</span>
+            <a class="navbar-brand" href="{% url 'logout' %}">выйти</a>
+        {% else %}
+            <a class="navbar-brand" href="{% url 'login' %}">войти</a>
+            <span class="navbar-text mr-3">|</span>
+            <a class="navbar-brand" href="{% url 'register' %}">регистрация</a>
+        {% endif %}
+
+    </nav>
+{% endblock header %}
+
+
+{% block content %}
+ (NO CONTENT)
+{% endblock content %}

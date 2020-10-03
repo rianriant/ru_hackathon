@@ -1,0 +1,14 @@
+{% extends 'main/content_page.html' %}
+
+<div class="container">
+    {% block content %}
+    <h6>{{ ivent.title }}</h6>
+    <h6>Опубликовал(а) : <a href='{{ ivent.created_by.get_absolute_url }}'>{{ ivent.created_by }}</a></h6>
+    <h6>Место проведения : 
+        <a href="{% url 'ivent-list' %}?area={{ ivent.area.id }}">{{ ivent.area.name }}</a> 
+        {{ ivent.address }}
+    </h6>
+    <h6>Описание</h6>
+    {{ ivent.description }}
+    {% endblock content %}
+</div>

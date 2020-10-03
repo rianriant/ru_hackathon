@@ -1,0 +1,85 @@
+body {
+    background-color: rgba(255, 255, 255, 0.986);
+    font-family: system-ui;
+}
+
+.ceiling {
+    height: 19px;
+}
+
+#profile-ceiling {
+    height: 24px;
+}
+
+
+.navbar a:link {
+    color: rgb(90, 90, 94);
+}
+
+.navbar a:visited {
+    color: rgb(90, 90, 94);
+  }
+  
+.navbar a:hover {
+    color: rgb(40, 40, 41);
+}
+
+.profile-card {
+    color: rgb(24, 74, 95);
+}
+
+#listing {
+    color: rgba(22, 63, 80);
+    font-size: small;
+}
+
+#listing a:link {
+    color: rgb(36, 151, 201);
+}
+
+#listing a:visited {
+    color: rgb(131, 55, 202);
+}
+
+#listing a:hover {
+    color: rgb(36, 151, 201);
+}
+
+.card a {
+    background-color: rgba(249,168,37,1);
+}
+
+.sidenav {
+    height: 100%;
+    
+}
+
+.profile-ivents {
+    height:480px;
+    border-width: 1.2px;
+    border-style: solid;
+    border-radius: 2%;
+    border-color: rgb(202, 202, 212);
+}
+
+.figure-caption a:link {
+    color: rgb(117, 117, 121);
+}
+
+.figure-caption a:visited {
+    color: rgb(117, 117, 121);
+}
+
+.figure-caption a:hover {
+    color: rgb(80, 80, 83);
+}
+
+
+#profile-scroll-ceiling {
+    height: 45%;
+}
+
+#profile-scroll-absence {
+    color: rgb(170, 170, 177);
+    font-size: smaller;
+}

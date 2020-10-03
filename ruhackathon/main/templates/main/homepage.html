@@ -1,0 +1,31 @@
+{% extends 'main/content_page.html' %}
+
+{% block content %}
+    <div class="container">
+        <table class="table" id="listing">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">Название</th>
+                    <th scope="col">Метки</th>
+                    <th scope="col">Место</th>
+                    <th scope="col">Регистрация</th>
+                    <th scope="col">Соревнование</th>
+                    
+                </tr>
+            </thead>
+                <tbody>
+                    {% for ivent in ivents %}
+                    <tr>
+                        
+                            <td> <a href="{{ ivent.get_absolute_url }}">{{ ivent.title }}</a></td>
+                            <td></td>
+                            <td> <a href="{% url 'ivent-list' %}?area={{ ivent.area.id }}">{{ ivent.area.name }}</a></td>
+                            <td>{{ ivent.reg_start_date|date:"SHORT_DATE_FORMAT" }} - {{ ivent.reg_finish_date|date:"SHORT_DATE_FORMAT" }}</td>
+                            <td>{{ ivent.ivent_start_date|date:"SHORT_DATE_FORMAT" }} - {{ ivent.ivent_finish_date|date:"SHORT_DATE_FORMAT" }}</td>
+                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+        </table>
+    </div>
+{% endblock content %}

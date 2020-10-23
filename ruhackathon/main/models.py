@@ -6,13 +6,14 @@ from ckeditor.fields import RichTextField
 from PIL import Image
 from django.contrib.auth.models import User
 from users.models import Profile
+from tinymce.models import HTMLField
 
 
 
 class Ivent(models.Model):
     """Ivent Data"""
     title = models.CharField(max_length=64)
-    description = RichTextField(blank=True, config_name='default')
+    description = HTMLField(blank=True)
     area = models.ForeignKey(City, on_delete=models.CASCADE, default=City.objects.get(name='Moscow').id)
     address = models.TextField(max_length=124, blank=True)
 
@@ -36,3 +37,4 @@ class Ivent(models.Model):
     # Returns URL referenced to DetailView for the instance
     def get_absolute_url(self):
         return reverse('ivent-detail', kwargs = {'pk': self.pk})
+

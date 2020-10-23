@@ -12,7 +12,7 @@
 
 {% block content %}
 <div class="content-section">
-    <form method="POST">
+    <!-- <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Регистрация пользователя</legend>
@@ -21,6 +21,7 @@
         <div class="form-group">
             <button class="btn-outline-dark" type="submit">Зарегистрироваться</button>
         </div>
-    </form>
+    </form> -->
+    {% crispy form %}
 </div>
 {% endblock content %}

@@ -30,8 +30,8 @@ INSTALLED_APPS = [
     'bootstrap4',
     'crispy_forms',
     'cities_light',
-    'ckeditor',
     'sorl.thumbnail',
+    'tinymce',
     
 ]
 
@@ -124,24 +124,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CITIES_LIGHT_INCLUDE_COUNTRIES = ['RU']
 CITIES_LIGHT_TRANSLATION_LANGUAGES = ['ru', 'rus']
 
-# ckeditor settings:
-
-CKEDITOR_CONFIGS = {
-    'default':
-    {'toolbar': 'Custom',
-        'toolbar_Custom': [
-            ['Bold', 'Link', 'Unlink', 'Image'],
-        ],
-        'height': 200,
-        'width': 700,
-    },
-}
-
-
-# modeltranslation settings:
-
-gettext = lambda s: s
-LANGUAGES = (
-    ('ru', gettext('Russian')),
-    ('en', gettext('English')),
-)
+# mce config:

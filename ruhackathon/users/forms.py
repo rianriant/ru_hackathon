@@ -2,8 +2,33 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm 
 from .models import Profile
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
+
+# Original form
+#
+# class UserRegisterForm(UserCreationForm):
+#     email = forms.EmailField()
+
+#     class Meta:
+#         model = User
+#         fields = ['username', 'email', 'password1', 'password2']
 
 class UserRegisterForm(UserCreationForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_id = 'registerForm'
+        self.helper.form_class = 'blueForms'
+        self.helper.form_method = 'post'
+
+        # Name of the route where the post request is addressed to:
+        self.helper.form_action = 'register'
+
+        # Description for the submit-typed button with sign "Submit":
+        self.helper.add_input(Submit('submit', 'Submit'))
+
     email = forms.EmailField()
 
     class Meta:
@@ -18,6 +43,7 @@ class UserUpdateForm(forms.ModelForm):
         fields = ['username', 'email']
 
 class ProfileUpadateForm(forms.ModelForm):
+    
      class Meta:
         model = Profile
         fields = ['image']

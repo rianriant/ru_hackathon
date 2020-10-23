@@ -16,7 +16,7 @@ from users.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('grappelli/', include('grappelli.urls')),
-    #path('tinymce/', include('tinymce.urls')),
+    path('tinymce/', include('tinymce.urls')),
     path('', IventListView.as_view(), name='ivent-list'),
     path('create/', IventCreateView.as_view(), name='ivent-create'),
     path('ivent/<int:pk>/', IventDetailView.as_view(), name='ivent-detail'),

@@ -9,9 +9,8 @@ django-bootstrap4==2.2.0
 djangorestframework==3.11.1
 psycopg2-binary==2.8.5
 python-dotenv==0.14.0 
-#django-environ==0.4.5
 django-cities-light==3.6.0
 django-grappelli==2.14.2
-django-ckeditor
 sorl-thumbnail
 django-modeltranslation
+django-tinymce

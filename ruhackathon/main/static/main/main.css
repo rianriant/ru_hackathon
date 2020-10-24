@@ -83,3 +83,8 @@ body {
     color: rgb(170, 170, 177);
     font-size: smaller;
 }
+
+/* Blocking for upper asterisks in form signs */ 
+.asteriskField {
+    display: none;
+}

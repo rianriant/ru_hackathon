@@ -62,7 +62,7 @@ db.sqlite3
 db.sqlite3-journal
 ruhackathon/static/
 ruhackathon/media/**
-ruhackathon/.vscode/
+**/.vscode
 **/migrations/**
 !**/migrations
 !**/migrations/__init__.py

@@ -60,12 +60,10 @@ coverage.xml
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-ruhackathon/static/
-ruhackathon/media/**
-**/.vscode/
-**/migrations/**
-!**/migrations
-!**/migrations/__init__.py
+/ruhackathon/static/
+/ruhackathon/media/
+**/.vscode
+**/migrations
 
 # Flask stuff:
 instance/

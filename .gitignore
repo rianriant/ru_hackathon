@@ -64,6 +64,7 @@ db.sqlite3-journal
 /ruhackathon/**/migrations/
 !/ruhackathon/**/migrations/__init__.py
 /ruhackathon/static/
+/ruhackathon/media/
 
 
 # Flask stuff:

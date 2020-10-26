@@ -124,4 +124,11 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CITIES_LIGHT_INCLUDE_COUNTRIES = ['RU']
 CITIES_LIGHT_TRANSLATION_LANGUAGES = ['ru', 'rus']
 
-# mce config:
+# E-mail backend config:
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = os.getenv('MAILBOX_HOST')
+EMAIL_PORT = os.getenv('MAILBOX_PORT')
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.getenv('MAILBOX_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('MAILBOX_HOST_PASSWORD')

@@ -64,7 +64,7 @@ db.sqlite3-journal
 /ruhackathon/**/migrations/
 !/ruhackathon/**/migrations/__init__.py
 /ruhackathon/static/
-/ruhackathon/media/
+/ruhackathon/media/*
 
 
 # Flask stuff:
@@ -133,3 +133,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# VS Code extention
+/ruhackathon/.vscode/

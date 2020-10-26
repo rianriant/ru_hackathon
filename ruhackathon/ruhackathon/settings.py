@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'main.apps.MainConfig',
     'users.apps.UsersConfig',
+    'api.apps.ApiConfig',
     'bootstrap4',
     'crispy_forms',
     'cities_light',

@@ -43,6 +43,7 @@ urlpatterns = [
         auth_views.PasswordResetCompleteView.as_view(
             template_name='users/password_reset_complete.html'), 
         name='password_reset_complete'),
+    path('api/', include('api.urls')),
 ]
 
 # The code below maintains handling of static files in debug mode

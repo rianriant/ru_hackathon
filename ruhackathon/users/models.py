@@ -5,12 +5,14 @@ from PIL import Image
 
 
 class Profile(models.Model):
+
     user = models.OneToOneField(User, to_field='username', on_delete=models.CASCADE, related_name='profile')
     image = models.ImageField(default='profile_pictures/default.jpg', upload_to='profile_pictures')
     description = models.TextField(blank=True, max_length=100)
+    is_confirmed = models.BooleanField()
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-
         img = Image.open(self.image.path)
 
         if img.width > 300 or img.height > 300:
